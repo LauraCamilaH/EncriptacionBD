@@ -1,23 +1,44 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Accordion, Button, Card, FormControl, InputGroup } from 'react-bootstrap';
 
 function App() {
+
+  const encriptar = (texto) => {
+ 
+
+  }
+  
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        {encriptar("Hola")}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <Card className="text-center" bg="success" style={{ width: '36rem' }} >
+          <Card.Header color="blue">
+            Escribe el mensaje que vas a encriptar!!!
+          </Card.Header>
+
+          <Card.Body>
+            <InputGroup>
+
+              <FormControl as="textarea" aria-label="mensaje" id="mensaje" />
+            </InputGroup>
+            <Card.Text></Card.Text>
+            <Button variant="primary" type="submit">Encriptar</Button>{' '}
+            <Card.Text></Card.Text>
+            <InputGroup>
+              <FormControl as="textarea" aria-label="mensaje" />
+            </InputGroup>
+          </Card.Body>
+
+        </Card>
+
       </header>
     </div>
   );
